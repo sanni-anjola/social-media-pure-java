@@ -1,12 +1,17 @@
 package model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
 import java.time.LocalDateTime;
 import java.util.Set;
 
-public class Post {
-    private Long id;
-    private String content;
-    private Long userId;
-    private LocalDateTime timeStamp;
+@Data
+@EqualsAndHashCode(callSuper = true)
+@NoArgsConstructor
+@AllArgsConstructor
+public class Post extends ContentUtility{
     private Set<Long> tagIds;
 }
